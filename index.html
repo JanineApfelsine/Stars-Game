@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Chakra+Petch" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>  
+  <link rel="stylesheet" href="style.css">
+  <title>Star-Gamet</title>
+</head>
+<body>
+    <div id="gameEnd" style="display: none">
+      Ende
+    
+    </div>
+  <div class="flex-container left-bar nowrap">
+    <div class="header">
+    <img src="images/Logo.png" width="100" height="100"></img><h1>Twinkle twinkle...</h1><div class="headerTwo">little star.</div>
+    
+  </div>
+      Instructions of the game
+      <br>
+      <button id="start-game-button">...way to the stars</button>
+
+      <div class="score">  Score 0</div>
+
+    <div class="question1" style="display: none">
+      <br>
+     <h2><font color=#FFFFFF>I. Welches Sternzeichen ist das?</font></h2> 
+     (1)<button name="answerOne" class="answer correct">Schwertfisch</button>
+     <br>
+     <br>
+     (2)<button name="answerTwo" class="answer">Fliege</button>
+     <br>
+     <br>
+     (3)<button name="answerThree" class="answer">Giraffe</button>
+  </div>
+  <div class="question2" style="display: none;">
+      <br>
+  <h2><font color=#FFFFFF>II. Welches Sternzeichen ist das?</font></h2> 
+  <button name="Drache" class="answer">Drache</button>
+  <button name="Schwan" class="answer correct">Schwan</button>
+  <button name="Wal" class="answer">Wal</button>
+  </div>
+
+  <div class="question3" style="display: none;">
+      <br>
+  <h2><font color=#FFFFFF>III. Welches Sternzeichen ist das?</font></h2> 
+  <button name="Bärenhüter" class="answer">Bärenhüter</button>
+  <button name="Chamäleon" class="answer correct">Chamäleon</button>
+  <button name="Hase" class="answer">Hase</button>
+  </div>
+
+
+  </div>
+
+  
+
+  <div class="flex-container right-bar nowrap">
+      <canvas id="stars" width="600" height="600"></canvas>
+   
+  </div>
+  <script type="text/javascript" src="game.js"></script>
+  <script type="text/javascript" src="canvas.js"></script>
+</body>
+</html>

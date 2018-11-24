@@ -1,0 +1,64 @@
+body {
+    font-family: 'Amatic SC', cursive;
+  }
+  .container {
+    display: flex; /* or inline-flex */
+  }
+
+  .nowrap  { 
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+
+.header{
+    /* font-family: 'Chakra Petch', sans-serif; */
+    font-family: 'Amatic SC', cursive;
+    color: whitesmoke;
+}
+
+.headerTwo{
+    font-family: 'Pacifico', cursive;
+    color: whitesmoke;
+}
+
+#start-game-button{
+    background-color: #e7e7e7;
+    font-size: 20px;
+    padding: 12px 28px;
+    border-radius: 12px;
+    font-family: 'Amatic SC', cursive;
+
+
+}
+
+  .left-bar {
+    background-image: linear-gradient(to bottom, black 10%, #06365f 50%);
+    padding: 10px 30px 100px 80px;
+    float: left;
+    border: 3px solid #17212e;
+    width: 400px;
+    height: 611px;
+  }
+
+  #gameEnd {
+    z-index: 10;
+    background-color: whitesmoke;
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    position: center;
+    top: 200px;
+    left: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .right-bar {
+    background-image: url("./images/sternenhimmel.png");
+    position: right;
+    padding: 50px;
+    margin: 0px 0px 0px 20px; 
+    height: 622px;
+    border: 3px solid #17212e;
+  } 
