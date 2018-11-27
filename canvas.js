@@ -44,28 +44,18 @@ class starsCanvas {
 			_starsCanvas.ctx.drawImage(imgStar, 350, 440, 40, 40);
 			_starsCanvas.ctx.drawImage(imgStar, 450, 440, 40, 40);
 			_starsCanvas.ctx.drawImage(imgStar, 550, 440, 40, 40);
+			//6.row
+			_starsCanvas.ctx.drawImage(imgStar, 100, 540, 40, 40);
+			_starsCanvas.ctx.drawImage(imgStar, 200, 540, 40, 40);
+			_starsCanvas.ctx.drawImage(imgStar, 300, 540, 40, 40);
+			_starsCanvas.ctx.drawImage(imgStar, 400, 540, 40, 40);
+			_starsCanvas.ctx.drawImage(imgStar, 500, 540, 40, 40);
 		};
 	}
+
+
+
 	//1.
-	drawChamäleon() {
-		this.ctx.beginPath();
-		this.ctx.moveTo(280, 40);
-		this.ctx.lineTo(270, 260);
-		this.ctx.lineTo(390, 480);
-		this.ctx.strokeStyle = 'yellow';
-		this.ctx.stroke();
-	}
-	//2.
-	drawParadiesvogel() {
-		this.ctx.beginPath();
-		this.ctx.moveTo(100, 140);
-		this.ctx.lineTo(470, 260);
-		this.ctx.lineTo(500, 340);
-		//funkelnder Stern fehlt
-		this.ctx.strokeStyle = 'yellow';
-		this.ctx.stroke();
-	}
-	//3.
 	 drawSchwertfisch() {
             this.ctx.beginPath();
             this.ctx.moveTo(520, 160);
@@ -76,7 +66,7 @@ class starsCanvas {
             this.ctx.strokeStyle = 'yellow';
             this.ctx.stroke();
         }
-	//4,
+	//2.
 	drawSchwan() {
 		this.ctx.beginPath();
 		this.ctx.moveTo(200, 140);
@@ -87,6 +77,27 @@ class starsCanvas {
 		this.ctx.lineTo(270, 260);
 		this.ctx.lineTo(370, 260);
 		this.ctx.lineTo(420, 140);
+		this.ctx.strokeStyle = 'yellow';
+		this.ctx.stroke();
+	}
+	
+	//3.
+	drawChamäleon() {
+		this.ctx.beginPath();
+		this.ctx.moveTo(280, 40);
+		this.ctx.lineTo(270, 260);
+		this.ctx.lineTo(390, 480);
+		this.ctx.strokeStyle = 'yellow';
+		this.ctx.stroke();
+	}
+
+	//4.
+	drawParadiesvogel() {
+		this.ctx.beginPath();
+		this.ctx.moveTo(100, 140);
+		this.ctx.lineTo(470, 260);
+		this.ctx.lineTo(500, 340);
+		//funkelnder Stern fehlt
 		this.ctx.strokeStyle = 'yellow';
 		this.ctx.stroke();
 	}
@@ -124,9 +135,50 @@ class starsCanvas {
 		this.ctx.strokeStyle = 'yellow';
 		this.ctx.stroke();
 	}
+	//8.
+	drawEinhorn() {
+		this.ctx.beginPath();
+		this.ctx.moveTo(270, 260);
+		this.ctx.lineTo(470, 60);
+		this.ctx.lineTo(570, 60);
+		this.ctx.moveTo(270, 260);
+		this.ctx.lineTo(520, 360);
+		this.ctx.lineTo(640, 280);
+		this.ctx.moveTo(270, 260);
+		this.ctx.lineTo(70, 460);
+		this.ctx.lineTo(320, 560);
+		this.ctx.strokeStyle = 'yellow';
+		this.ctx.stroke();
+	}
+
+	//9.
+	drawTaube() {
+		this.ctx.beginPath();
+		this.ctx.moveTo(70, 60);
+		this.ctx.lineTo(120, 160);
+		this.ctx.lineTo(420, 360);
+		this.ctx.lineTo(380, 560);
+		this.ctx.moveTo(420, 360);
+		this.ctx.lineTo(520, 160);
+		this.ctx.lineTo(570, 260);	
+		this.ctx.strokeStyle = 'yellow';
+		this.ctx.stroke();
+	}
+
+	//10.
+	drawPfeil() {
+		this.ctx.beginPath();
+		this.ctx.moveTo(50, 240);
+		this.ctx.lineTo(300, 340);
+		this.ctx.lineTo(400, 340);
+		this.ctx.moveTo(300, 340);
+		this.ctx.lineTo(500, 340);
+		this.ctx.strokeStyle = 'yellow';
+		this.ctx.stroke();
+	}
 }
 
-var questionNum= 1;
+var questionNumber= 1;
 
 $(function() {
 	var gameStarted = false;
@@ -135,13 +187,16 @@ $(function() {
     canvas = new starsCanvas();
 
     drawConstellationArray = [
-        canvas.drawSchwertfisch,
+		canvas.drawSchwertfisch,
         canvas.drawSchwan,
         canvas.drawChamäleon,
         canvas.drawParadiesvogel,
         canvas.drawTukan,
         canvas.drawFliege,
-        canvas.drawGiraffe
+		canvas.drawGiraffe,
+		canvas.drawEinhorn,
+		canvas.drawTaube,
+		canvas.drawPfeil
     ];
 
 	$('#start-game-button').click(function() {
@@ -149,29 +204,36 @@ $(function() {
 
 		// hides the start button
 		$('#start-game-button').hide();
+		$('.instructions').hide();
         $('.question1').toggle();
         // canvas = new starsCanvas();
 
 		gameStarted = true;
 
 		canvas.drawStars();
-        console.log("DRAW ARRAY======");
-        // var pumpkin = "draw" + questionNum
         canvas.drawSchwertfisch()
 	});
 
+	$('.restart-game-button').click(function() {
+		
+		window.location.reload()
+	});
 
 	var score = 0;
 
 	function newScore(score) {
-		$('.score').html('Score' + score);
+		$('.score').html('Score:  ' + score +'/10');
 	}
 
-    var index= 0;
+    var questionIndex= 0;
 
     
 
 	$('.answer').click(function(e) {
+		if (questionNumber===10 && score<= 3){$('#gameEndOne').toggle()};
+		if (questionNumber===10 && score<=6 && score>3){$('#gameEndTwo').toggle()};
+		if (questionNumber===10 && score>6 && score<=9){$('#gameEndThree').toggle()};
+		if (questionNumber===10 && score===10){$('#gameEndFour').toggle()};
 		var currentAnswer = $(this);
 		if (currentAnswer.hasClass('correct')) {
 			alert('Juhu');
@@ -180,15 +242,16 @@ $(function() {
 		} else {
 			alert(':-(');
 		}
-        index++;
+        questionIndex++;
 		canvas.ctx.clearRect(0, 0, 600, 600);
 		canvas.drawStars();
-        drawConstellationArray[index].bind(canvas)();
-        var currentQ= '.question'+questionNum;
-        $(currentQ).hide();
-        questionNum++;
-        var nextQ= '.question'+questionNum;
-        $(nextQ).toggle();
-        if (questionNum===10){$(#gameEnd).toggle()}
+        drawConstellationArray[questionIndex].bind(canvas)();
+        var currentQuestion= '.question'+questionNumber;
+		$(currentQuestion).hide();
+        questionNumber++;
+        var nextQ= '.question'+questionNumber;
+		$(nextQ).toggle();
+		console.log(questionNumber)
+		
 	});
 });

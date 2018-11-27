@@ -13,56 +13,121 @@
   <title>Star-Gamet</title>
 </head>
 <body>
-    <div id="gameEnd" style="display: none">
-      Ende
     
-    </div>
   <div class="flex-container left-bar nowrap">
     <div class="header">
-    <img src="images/Logo.png" width="100" height="100"></img><h1>Twinkle twinkle...</h1><div class="headerTwo">little star.</div>
+    <img src="images/Logo.png" width="100" height="100"><h1>Twinkle twinkle...</h1><div class="headerTwo">little star.</div>
     
   </div>
-      Instructions of the game
+
+    <div class="instructions"><h3>Instructions of the game: guess the constellations become a star yourself</h3></div> 
+      <br>
       <br>
       <button id="start-game-button">...way to the stars</button>
 
-      <div class="score">  Score 0</div>
+      <div class="score">  Score:  0/10 </div>
 
     <div class="question1" style="display: none">
-      <br>
-     <h2><font color=#FFFFFF>I. Welches Sternzeichen ist das?</font></h2> 
-     (1)<button name="answerOne" class="answer correct">Schwertfisch</button>
-     <br>
-     <br>
-     (2)<button name="answerTwo" class="answer">Fliege</button>
-     <br>
-     <br>
-     (3)<button name="answerThree" class="answer">Giraffe</button>
+     <h2><font color=#FFFFFF>I. What constellation is this...?</font></h2> 
+     <button name="answerOne" class="answer correct">(1) The dolphinfish (dorado)</button><br> <br>
+     <button name="answerTwo" class="answer">(2) The wolf (lupus)</button><br><br>
+     <button name="answerThree" class="answer">(3) The water snake (hydrus)</button>
   </div>
+
   <div class="question2" style="display: none;">
       <br>
-  <h2><font color=#FFFFFF>II. Welches Sternzeichen ist das?</font></h2> 
-  <button name="Drache" class="answer">Drache</button>
-  <button name="Schwan" class="answer correct">Schwan</button>
-  <button name="Wal" class="answer">Wal</button>
+  <h2><font color=#FFFFFF>II. What constellation is this...?</font></h2> 
+  <button name="Drache" class="answer">(1) The dragon (draco)</button><br><br>
+  <button name="Schwan" class="answer correct">(2) The swan (cygnus)</button><br><br>
+  <button name="Wal" class="answer">(3) The whale (cetus)</button>
   </div>
 
   <div class="question3" style="display: none;">
       <br>
-  <h2><font color=#FFFFFF>III. Welches Sternzeichen ist das?</font></h2> 
-  <button name="Bärenhüter" class="answer">Bärenhüter</button>
-  <button name="Chamäleon" class="answer correct">Chamäleon</button>
-  <button name="Hase" class="answer">Hase</button>
+  <h2><font color=#FFFFFF>III. What constellation is this...?</font></h2> 
+  <button name="Bärenhüter" class="answer">(1) The crane (grus)</button><br><br>
+  <button name="Chamäleon" class="answer correct">(2) The chameleon (chamaeleon)</button><br><br>
+  <button name="Hase" class="answer">(3) The sea goat (capricornus)</button>
   </div>
 
+  <div class="question4" style="display: none;">
+    <br>
+<h2><font color=#FFFFFF>IV. What constellation is this...?</font></h2> 
+<button name="Krebs" class="answer">(1) The crab (cancer)</button><br><br>
+<button name="Kleiner Hund" class="answer">(2) The small dog (canis minor)</button><br><br>
+<button name="Paradiesvogel" class="answer correct">(3) The bird of paradise (Apus) </button>
+</div>
+
+<div class="question5" style="display: none;">
+  <br>
+<h2><font color=#FFFFFF>V. What constellation is this...?</font></h2> 
+<button name="Tukan" class="answer correct">(1) The toucan (Tucana)</button><br><br>
+<button name="Löwe" class="answer">(2) The lion (leo)</button><br><br>
+<button name="Adler" class="answer">(3) The eagle (Aquila)</button>
+</div>
+
+<div class="question6" style="display: none">
+  <br>
+ <h2><font color=#FFFFFF>VI. What constellation is this...?</font></h2> 
+ <button name="Fliege" class="answer correct">(1) The fly (musca)</button><br><br>
+ <button name="Delfin" class="answer">(2) The dolphin (delphinus)</button><br><br>
+ <button name="Einhorn" class="answer">(3) The unicorn (monoceros)</button>
+</div>
+
+<div class="question7" style="display: none">
+  <br>
+ <h2><font color=#FFFFFF>VII. What constellation is this...?</font></h2> 
+ <button name="Pfau" class="answer">(1) The peacock (pavo)</button><br><br>
+ <button name="Eidechse" class="answer">(2) The lizard (lacerta)</button><br><br>
+ <button name="Giraffe" class="answer correct">(3) The giraffe (camelopardalis)</button>
+</div>
+
+<div class="question8" style="display: none">
+  <br>
+ <h2><font color=#FFFFFF>VIII. What constellation is this...?</font></h2> 
+ <button name="Fische" class="answer">(1) The flying fish (volans)</button><br><br>
+ <button name="Einhorn" class="answer correct">(2) The unicorn (monoceros)</button><br><br>
+ <button name="Luchs" class="answer">(3) The lynx (lynx)</button>
+</div>
+
+<div class="question9" style="display: none">
+  <br>
+ <h2><font color=#FFFFFF>IX. What constellation is this...?</font></h2> 
+ <button name="Rabe" class="answer">(1) The raven (corvus) </button><br><br>
+ <button name="Taube" class="answer corrct">(2) The dove (columba) </button><br><br>
+ <button name="Eidechse" class="answer">(3)The little fox (vulpecula) </button>
+</div>
+
+<div class="question10" style="display: none">
+  <br>
+ <h2><font color=#FFFFFF>X. Bonus: What constellation is this...? <br>Really, they all exist!</font></h2> 
+ <button name="Pfeil" class="answer correct">(1) The arrow (sagitta) </button><br><br>
+ <button name="Pendeluhr" class="answer">(2) The pendulum clock (horologium) </button><br><br>
+ <button name="Luftpumpe" class="answer">(3) The air pump (antlia) </button>
+</div>
 
   </div>
-
-  
 
   <div class="flex-container right-bar nowrap">
       <canvas id="stars" width="600" height="600"></canvas>
    
+  </div>
+
+  <div id="gameEndOne" style="display: none">
+    1-3 Punkte
+    <button class="restart-game-button">...way to the stars again</button>
+  </div>
+  <div id="gameEndTwo" style="display: none">
+    4-6 Punkte
+    <button class="restart-game-button">...way to the stars again</button>
+  </div>
+  <div id="gameEndThree" style="display: none">
+    7-9 Punkte
+    <button class="restart-game-button">...way to the stars again</button>
+  </div>
+  <div id="gameEndFour" style="display: none">
+    10 Punkte
+    <button class="restart-game-button">...way to the stars again</button>
   </div>
   <script type="text/javascript" src="game.js"></script>
   <script type="text/javascript" src="canvas.js"></script>

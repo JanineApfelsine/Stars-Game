@@ -1,5 +1,6 @@
 body {
     font-family: 'Amatic SC', cursive;
+    color: whitesmoke;
   }
   .container {
     display: flex; /* or inline-flex */
@@ -27,8 +28,26 @@ body {
     padding: 12px 28px;
     border-radius: 12px;
     font-family: 'Amatic SC', cursive;
+}
 
+.restart-game-button{
+  background-color: #e7e7e7;
+  font-size: 20px;
+  padding: 12px 28px;
+  margin: 100px 200px 100px 200px;
+  border-radius: 12px;
+  font-family: 'Amatic SC', cursive;
+}
 
+.answer{
+  font-family: 'Amatic SC', cursive;
+  font-size: 18px;
+  padding: 12px 28px;
+  border-radius: 10px;
+}
+
+.score{
+  margin: 0px 20px 0px 300px;
 }
 
   .left-bar {
@@ -40,9 +59,51 @@ body {
     height: 611px;
   }
 
-  #gameEnd {
+  #gameEndOne {
     z-index: 10;
-    background-color: whitesmoke;
+    background-image: linear-gradient(to bottom, black 10%, #06365f 50%);
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    position: center;
+    top: 200px;
+    left: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  #gameEndTwo {
+    z-index: 10;
+    background-image: linear-gradient(to bottom, black 10%, #06365f 50%);
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    position: center;
+    top: 200px;
+    left: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  #gameEndThree {
+    z-index: 10;
+    background-image: linear-gradient(to bottom, black 10%, #06365f 50%);
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    position: center;
+    top: 200px;
+    left: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  #gameEndFour {
+    z-index: 10;
+    background-image: linear-gradient(to bottom, black 10%, #06365f 50%);
     width: 60%;
     height: 60%;
     position: absolute;
