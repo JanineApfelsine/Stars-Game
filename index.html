@@ -16,9 +16,15 @@
     
   <div class="flex-container left-bar nowrap">
     <div class="header">
-    <img src="images/Logo.png" width="100" height="100"><h1>Twinkle twinkle...</h1><div class="headerTwo">little star.</div>
-    
+    <img src="images/Logo.png" width="100" height="100">
+   <div class="textHeader"><h1>Twinkle twinkle...</h1>
+    <div class="headerTwo">little star.</div>
+  </div> 
+  
   </div>
+  <hr/>
+  <br>
+  <br>
 
     <div class="instructions"><h3>Instructions of the game: guess the constellations become a star yourself</h3></div> 
       <br>
@@ -94,7 +100,7 @@
   <br>
  <h2><font color=#FFFFFF>IX. What constellation is this...?</font></h2> 
  <button name="Rabe" class="answer">(1) The raven (corvus) </button><br><br>
- <button name="Taube" class="answer corrct">(2) The dove (columba) </button><br><br>
+ <button name="Taube" class="answer correct">(2) The dove (columba) </button><br><br>
  <button name="Eidechse" class="answer">(3)The little fox (vulpecula) </button>
 </div>
 
@@ -114,22 +120,35 @@
   </div>
 
   <div id="gameEndOne" style="display: none">
-    1-3 Punkte
-    <button class="restart-game-button">...way to the stars again</button>
+    <br>
+    <br>
+   <h1>Hey - you are between 0-3 points...</h1>  
+    <h2>Try again or just do it as the Americans and pretend have been to moon</h2>
+    <button class="restart-game-button">Try again!</button>
   </div>
   <div id="gameEndTwo" style="display: none">
-    4-6 Punkte
-    <button class="restart-game-button">...way to the stars again</button>
+    <br>
+    <br>
+    <h1>4-6 points - You shine bright like a diamond</h1>
+    <button class="restart-game-button">Wanna try again?</button>
   </div>
   <div id="gameEndThree" style="display: none">
-    7-9 Punkte
-    <button class="restart-game-button">...way to the stars again</button>
+    <br>
+    <br>
+   <h1>Wow!!! 7-9 points! You are really close the stars...</h1>
+    <button class="restart-game-button">Now you will reach them</button>
   </div>
   <div id="gameEndFour" style="display: none">
-    10 Punkte
-    <button class="restart-game-button">...way to the stars again</button>
+    <br>
+    <br>
+    <h1>10 Points! Awesome! Now you are like Elon Musk...</h1>
+    <button class="restart-game-button">Ready for the Mars?</button>
   </div>
   <script type="text/javascript" src="game.js"></script>
   <script type="text/javascript" src="canvas.js"></script>
+
+<!-- <audio id="correctAnswer" scr="music/..."></audio> -->
+
+
 </body>
 </html>

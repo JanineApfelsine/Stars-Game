@@ -15,6 +15,13 @@ body {
     /* font-family: 'Chakra Petch', sans-serif; */
     font-family: 'Amatic SC', cursive;
     color: whitesmoke;
+    display: flex;
+    align-items: center;
+    /* border-bottom: whitesmoke; */
+}
+
+hr {
+  color: whitesmoke;
 }
 
 .headerTwo{
@@ -22,19 +29,27 @@ body {
     color: whitesmoke;
 }
 
+.textHeader{
+  align-items: baseline;
+  display: flex;
+  margin: 20px;
+}
+
+
 #start-game-button{
     background-color: #e7e7e7;
     font-size: 20px;
     padding: 12px 28px;
     border-radius: 12px;
     font-family: 'Amatic SC', cursive;
+    border-color: whitesmoke;
 }
 
 .restart-game-button{
   background-color: #e7e7e7;
-  font-size: 20px;
+  font-size: 24px;
   padding: 12px 28px;
-  margin: 100px 200px 100px 200px;
+  margin: 20px 200px 100px 230px;
   border-radius: 12px;
   font-family: 'Amatic SC', cursive;
 }
@@ -71,6 +86,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     display: block;
+    text-align: center;
   }
 
   #gameEndTwo {
@@ -85,6 +101,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     display: block;
+    text-align: center;
   }
 
   #gameEndThree {
@@ -99,6 +116,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     display: block;
+    text-align: center;
   }
 
   #gameEndFour {
@@ -113,6 +131,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     display: block;
+    text-align: center;
   }
 
   .right-bar {

@@ -227,6 +227,10 @@ $(function() {
 
     var questionIndex= 0;
 
+	// function playMusic(){
+	// 	music.play();
+	// }
+		
     
 
 	$('.answer').click(function(e) {
@@ -237,6 +241,7 @@ $(function() {
 		var currentAnswer = $(this);
 		if (currentAnswer.hasClass('correct')) {
 			alert('Juhu');
+			// correctAnswer.play();
 			score++;
 			newScore(score);
 		} else {
