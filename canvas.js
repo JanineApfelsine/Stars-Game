@@ -160,7 +160,7 @@ class starsCanvas {
 		this.ctx.lineTo(380, 560);
 		this.ctx.moveTo(420, 360);
 		this.ctx.lineTo(520, 160);
-		this.ctx.lineTo(570, 260);	
+		this.ctx.lineTo(620, 200);	
 		this.ctx.strokeStyle = 'yellow';
 		this.ctx.stroke();
 	}
@@ -169,10 +169,11 @@ class starsCanvas {
 	drawPfeil() {
 		this.ctx.beginPath();
 		this.ctx.moveTo(50, 240);
-		this.ctx.lineTo(300, 340);
-		this.ctx.lineTo(400, 340);
-		this.ctx.moveTo(300, 340);
-		this.ctx.lineTo(500, 340);
+		this.ctx.lineTo(320, 360);
+		this.ctx.lineTo(460, 350);
+		this.ctx.moveTo(320, 360);
+		this.ctx.lineTo(390, 470);
+
 		this.ctx.strokeStyle = 'yellow';
 		this.ctx.stroke();
 	}
@@ -205,7 +206,8 @@ $(function() {
 		// hides the start button
 		$('#start-game-button').hide();
 		$('.instructions').hide();
-        $('.question1').toggle();
+		$('.question1').toggle();
+		$('.score').toggle();
         // canvas = new starsCanvas();
 
 		gameStarted = true;
@@ -228,10 +230,11 @@ $(function() {
     var questionIndex= 0;
 
 	// function playMusic(){
-	// 	music.play();
+	// 	correctAnswer.play();
 	// }
 		
-    
+	var audio= new Audio('music/trumpet.wav');
+	var audioTwo= new Audio('music/win.wav');
 
 	$('.answer').click(function(e) {
 		if (questionNumber===10 && score<= 3){$('#gameEndOne').toggle()};
@@ -240,12 +243,16 @@ $(function() {
 		if (questionNumber===10 && score===10){$('#gameEndFour').toggle()};
 		var currentAnswer = $(this);
 		if (currentAnswer.hasClass('correct')) {
-			alert('Juhu');
+			audioTwo.play();
+			// alert('Yeah!');
 			// correctAnswer.play();
+			// playMusic();
 			score++;
 			newScore(score);
 		} else {
-			alert(':-(');
+			// alert(':-(');
+			audio.play();
+
 		}
         questionIndex++;
 		canvas.ctx.clearRect(0, 0, 600, 600);

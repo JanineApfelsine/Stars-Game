@@ -35,6 +35,10 @@ hr {
   margin: 20px;
 }
 
+.score{
+  font-weight: bold;
+  font-size: 1.4em;
+}
 
 #start-game-button{
     background-color: #e7e7e7;
